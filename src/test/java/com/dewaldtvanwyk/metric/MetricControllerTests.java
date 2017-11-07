@@ -32,12 +32,10 @@ public class MetricControllerTests {
 	public void testFahrenheitToCelsius()
 	{
 		try {
-			//Test case that 30 degrees celsuis should equal 62 fahrenheit
+			//Test case that 30 degrees celsuis should equal 86 fahrenheit
 			MetricResponse metricResponse = controller.temperature("celsius", 30.0);
 			assertEquals(true,metricResponse.getUnit().equalsIgnoreCase("fahrenheit"));
-			assertEquals((Double)62.0,metricResponse.getValue());
-			
-			
+			assertEquals((Double)86.0,metricResponse.getValue());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			assertEquals(false,true); //failure
