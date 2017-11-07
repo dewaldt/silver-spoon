@@ -40,7 +40,7 @@ public class MetricController {
 		case CELSIUS:
 			metricResponse.setUnit(FAHRENHEIT);
 			// [°F] = [°C] × 9/5 + 32
-			calc = (value * (9 / 5) + 32);
+			calc = (value * 9 / 5 + 32);
 			metricResponse.setValue(calc);
 			break;
 		//takes fahrenheit and gives celsius
@@ -49,7 +49,6 @@ public class MetricController {
 			// [°C] = ([°F] - 32) × 5/9
 			calc = (value - 32) * 5 / 9;
 			metricResponse.setValue(calc);
-			break;
 		default:
 			throw new Exception(from.toUpperCase() + " is not a supported temperature unit.");
 		}
